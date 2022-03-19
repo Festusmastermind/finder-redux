@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/layout/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import NotFound from "./pages/NotFound";
+import User from "./pages/User";
+
+
+
+//import Footer from "./components/layout/Footer";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   
+    return (
+        <Provider store={store} >
+            <Router>
+                <ToastContainer />
+                <Navbar />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/user/:login" element={<User />} />
+                    <Route path="/notfound" element={<NotFound />} />
+                    <Route path="/*" element={<NotFound />} /> {/**This means that all pages that does not existed */}
+                </Routes>
+                {/* <Footer /> */}
+            </Router>
+        </Provider>
+       
+    );
 }
 
 export default App;

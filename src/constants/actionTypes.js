@@ -1,0 +1,8 @@
+export const SET_LOADING = "SET_LOADING";
+export const CLEAR_USERS  = "CLEAR_USRES";
+export const USERS_LOADED = "USERS_LOADED";
+export const USER_LOADED = "USER_LOADED"; 
+export const REPOS_LOADED = "REPOS_LOADED";
+export const USER_REPOS_LOADED = "USER_REPOS_LOADED";
+
+//USER_LOADED AND REPOS_LOADED  is combined into USER_REPOS_LOADED 
