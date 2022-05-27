@@ -31,28 +31,20 @@ function UserSearch() {
             <div className="input-group mb-3 mt-5">
                 <input
                     type="text"
-                    className="form-control-lg"
+                    className="form-control"
                     placeholder="...search for any gitHUB user"
                     value={text}
                     onChange={e => setText(e.target.value)}
                     aria-label="Recipient's username"
                     aria-describedby="button-addon2"
                 />
-                <button
-                    className="btn btn-outline-primary"
-                    type="submit"
-                    id="button-addon2"
-                >
-                    search
-                </button>
+                <button className="btn btn-outline-info text-uppercase" type="submit" id="button-addon2"> search </button>
                 {
                     users.length > 0 && (
-                        <button className='btn btn-outline-danger' onClick={()=> dispatch({type: CLEAR_USERS})}>RESET</button>
+                        <button className='btn btn-outline-danger text-uppercase' onClick={()=> dispatch({type: CLEAR_USERS})}>Clear Users</button>
                     )
-                }
-                
+                }  
             </div>
-            
         </form>
     );
 }

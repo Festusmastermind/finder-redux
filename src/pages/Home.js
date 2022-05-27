@@ -4,7 +4,9 @@ import UserSearch from "../components/users/UserSearch";
 function Home() {
     return (
         <div className="container">
-            <UserSearch />
+            <div className="styleME" style={{margin: '0 auto', width:'40%'}}>
+                <UserSearch />
+            </div>
             <UserResults />
         </div>
     );

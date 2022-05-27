@@ -1,6 +1,71 @@
-.footerControl {
-    width: auto;
-    max-width: 680px;
-    padding: 0 15px;
-  }
-  
+/*
+* custom css for properly styling of the components...
+*/
+
+.profileContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profileContainer>.imageStyle {
+    width: 35%;
+    border: 5px solid #006BD6;
+    border-radius: 50%;
+}
+
+.profileContainer>.textStyle {
+    width: 65%
+}
+
+.d-flex {
+    display: flex !important;
+    gap: 30px;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.imgContainer {
+    width: 30%;
+}
+
+/* .card-img-overlay {
+    top: 18rem;
+    left: 5px;
+} */
+.detailStyle {
+    width: 60%;
+}
+
+.addressStyle {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Styling for Stat Container */
+.parentContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;  
+}
+.statContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 120px;
+    padding: 20px;
+    background: #6C757D;
+    color: white;
+}
+
+.badge{
+    margin-right: 5px;
+}

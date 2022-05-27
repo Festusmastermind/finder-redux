@@ -1,17 +1,15 @@
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom';
+import '../../index.css'
 
-function UserItem({ user: { login, avatar_url, id } })  {
+function UserItem({ user: { login, avatar_url} })  {
     return (
-        <div className='d-flex flex-row' key={id}>
-            <div className='p-2'>
-                <img src={avatar_url} className="rounded-circle" alt="profile" width={70} />
-            </div>
-            <div className='p-2'>
+        <div className='profileContainer'>
+            <img src={avatar_url} className="imageStyle" alt="profile" />
+            <div className='textStyle'>
                 <h4>{login}</h4>
                 <Link to={`/user/${login}`} className='text-decoration-none link-info'>Visit Profile</Link>
             </div>
-              
         </div> 
     );
 }
