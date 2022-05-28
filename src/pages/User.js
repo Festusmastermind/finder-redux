@@ -23,10 +23,9 @@ function User() {
     const { user, repos, loading } = useSelector((state) => state.gitHubUserReducer);
 
     //NB: to create alias e.g. location: LocateMe
-    const { name, type, avatar_url, location, bio, blog, twitter_username, login, html_url, followers, following,
+    const { name, avatar_url, location, bio, blog, twitter_username, login, html_url, followers, following,
         public_repos,
         public_gists,
-        hireable,
     } = user;
 
     if (loading) {
